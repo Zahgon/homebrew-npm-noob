@@ -68,11 +68,11 @@ class Version(object):
         return "%s %s" % (self.name, self.version)
 
     def _repr_pretty_(self, p, cycle):
-        p.text('<noob.Version "%s">' % str(self) if not cycle else "...")
+        pass
 
     @property
     def spec(self):
-        return VERSION_SPEC_TEMPLATE.render(version=self)
+        pass
 
 
 class Package(object):
@@ -100,13 +100,13 @@ class Package(object):
         return desc
 
     def _repr_pretty_(self, p, cycle):
-        p.text('<noob.Package "%s">' % str(self) if not cycle else "...")
+        pass
 
     @property
     def class_name(self):
         # Convert non-alphanumeric characters to spaces, title case, then drop spaces.
-        return re.sub(r"[^a-zA-Z0-9]+", " ", self.name).title().replace(" ", "")
+        pass
 
     @property
     def formula(self):
-        return FORMULA_TEMPLATE.render(package=self)
+        pass
